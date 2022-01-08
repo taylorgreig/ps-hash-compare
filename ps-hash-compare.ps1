@@ -20,6 +20,7 @@ $i = 1
 while($i -eq 1){
     Write-Host "`n"
     $filePath = Read-Host "Please drag the file onto this window or type/paste the file path"
+    # insert input cleaning here
     $hashToCheck = Get-FileHash -Path $filePath | Select-Object -ExpandProperty Hash  # > hash1.txt
     $officialHash = Read-Host "`nPlease paste the official hash here: "
     Write-Host "`n`n"
